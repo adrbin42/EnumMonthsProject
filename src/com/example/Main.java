@@ -19,6 +19,14 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String userSelectedMonth = scanner.nextLine();
 
-//      List<Month> list = new ArrayList<Month>();
+        List<String> monthArrayList = new ArrayList<>();
+        monthArrayList.add(userSelectedMonth);
+//        int index = 1;
+        for(Month eachMonth : Month.values()){
+            if(userSelectedMonth.equals()){
+
+            }
+//            monthArrayList.add();
+        }
     }
 }
