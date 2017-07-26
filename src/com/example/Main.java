@@ -1,7 +1,9 @@
 package com.example;
 
+import com.example.common.ConvertToJSON;
 import com.example.common.Month;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -9,7 +11,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        
+
         System.out.println("Please enter the name of a starting month : ");
         for (Month eachMonth : Month.values()){
             System.out.println(eachMonth);
@@ -36,5 +38,13 @@ public class Main {
 
         System.out.println("Your months are as follows: "+ monthArrayList);
         System.out.println(monthArrayList);
+
+        System.out.println("-----------------------------------------------------------------------");
+        System.out.println("Now sending the month you selected to JSON Report.");
+        try {
+            ConvertToJSON.monthConversion(userSelectedMonth);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
